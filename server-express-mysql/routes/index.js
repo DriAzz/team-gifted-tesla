@@ -22,6 +22,13 @@ connection.connect(function(err) {
   console.log("Database Connected!!");
 });
 
+//Query 1
+const query = `SELECT * FROM motherboards`;
+connection.query(query, (err, results) => {
+  if (err) throw err;
+  console.log(results);
+});
+
 /* GET home page. */
 router.get("/", function(req, res, next) {
   res.render("index", { title: "Express" });

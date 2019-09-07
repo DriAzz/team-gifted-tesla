@@ -1,7 +1,15 @@
 import React, {Component} from "react";
 import "./App.css";
 
-class App extends Component {
+const App = props => {
+  return (
+    <div>
+      <Backend />
+    </div>
+  );
+}
+
+class Backend extends Component {
   state = {
     data: null
   };
