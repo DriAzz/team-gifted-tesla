@@ -11,34 +11,30 @@ const App = props => {
 
 class Backend extends Component {
   state = {
-    data: null
-  };
+    motherboards: []
+  }
 
   componentDidMount() {
-    // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
+    this.getProducts();
   }
-  // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
+  getProducts = _ => {
+    fetch('http://localhost:5000/products')
+    .then(response => response.json())
+    .then(response => this.setState({ motherboards: response.data }))
+    .catch(err => console.error(err))
+  }
+
+  renderMotherboard = ({motherboardID, motherboardName}) => <div key={motherboardID}>{motherboardName}</div>
 
   render() {
+    const {motherboards} = this.state;
     return (
       <div className="App">
-        <p className="App-intro">{this.state.data}</p>
+        {motherboards.map(this.renderMotherboard)}
       </div>
-    );
+    )
   }
 }
-
 
 export default App;
