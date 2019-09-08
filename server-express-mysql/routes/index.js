@@ -19,24 +19,17 @@ connection.connect(function(err) {
     console.log(err.message);
     return;
   }
-  console.log("Database Connected!!");
-});
-
-//Query 1
-const query = `SELECT * FROM motherboards`;
-connection.query(query, (err, results) => {
-  if (err) throw err;
-  console.log(results);
-});
-
-/* GET home page. */
-router.get("/", function(req, res, next) {
-  res.render("index", { title: "Express" });
+  console.log("Database Connected!");
 });
 
 //GET response for backend
 app.get('/express_backend', (req, res, next) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+  const motherboardQuery = `SELECT * FROM motherboards`;
+  connection.query(motherboardQuery, (err, results) => {
+    if (err) throw err;
+    console.log(results);
+  });
+  res.send({ express: 'HI IM WORKING' });
 });
 
 module.exports = router;
