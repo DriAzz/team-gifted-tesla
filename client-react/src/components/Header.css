@@ -1,0 +1,24 @@
+.header-container {
+    width: 100%;
+    text-align: center;
+}
+
+.fa-flag-usa {
+    color: red;
+}
+
+.USAimage {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.buttonHover {
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.formSearch {
+    margin-top: 20px;
+    width: 40%;
+}
