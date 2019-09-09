@@ -19,6 +19,15 @@
 }
 
 .formSearch {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 40%;
+}
+
+.searchButton {
+    margin-left: 10px;
+}
+
+.dropdownProduct {
+    border: solid black 2px;
+    background-color: orange;
 }

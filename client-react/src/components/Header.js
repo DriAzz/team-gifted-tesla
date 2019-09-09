@@ -12,24 +12,25 @@ const Header = props => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">Link</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
                     </Nav>
-                    <Nav.Link href="#support"><img src={USAsvg} className="USAimage" /> +1 (555)555-5555</Nav.Link>
-                    <Nav.Link href="#login">Login</Nav.Link>
-                    <Nav.Link href="#signup">Signup</Nav.Link>
+                    <Form inline>
+                        <Nav>
+                            <Nav.Item>
+                                <Nav.Link className="button-header signupHeader" href="/signup">Signup</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link className="button-header loginHeader" href="/login">Login</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link className="button-header headerNumber" href="/support"><img src={USAsvg} className="USAimage" /> +1 (555)555-5555</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
+                    </Form>
                 </Navbar.Collapse>
             </Navbar>
             <Navbar bg="light" expand="lg">
                 <ButtonToolbar className="buttonHover buttonHover01">
-                    <NavDropdown title="Products" id="product-nav-dropdown">
+                    <NavDropdown title="Products" className="dropdownProduct" id="product-nav-dropdown">
                         <NavDropdown.Item href="#processors" className="dropdowns cpudrop">Processors</NavDropdown.Item>
                         <NavDropdown.Item href="#videocard" className="dropdowns gpudrop">Video Cards</NavDropdown.Item>
                         <NavDropdown.Item href="#motherboard" className="dropdowns motherdrop">Motherboards</NavDropdown.Item>
@@ -38,11 +39,14 @@ const Header = props => {
                 </ButtonToolbar>
                 <Form className="formSearch">
                     <Form.Group className="groupSearch">
-                        <Form.Control className="searchForm" type="search" placeholder="Looking for something?"></Form.Control>
+                        <Nav>
+                            <Form.Control className="searchForm" type="search" placeholder="Looking for something?"></Form.Control>
+                            <Button varient="primary" type="submit" className="searchButton">Search</Button>
+                        </Nav>
                     </Form.Group>
                 </Form>
             </Navbar>
-        </div >
+        </div>
     )
 }
 
