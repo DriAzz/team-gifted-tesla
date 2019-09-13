@@ -18,17 +18,17 @@ class Backend extends Component {
   }
 
   componentDidMount() {
-    this.getProducts();
+    this.getMotherboards();
   }
 
-  getProducts = _ => {
-    fetch('http://localhost:5000/products')
+  getMotherboards = _ => {
+    fetch('http://localhost:5000/motherboards/motherboard_list')
     .then(response => response.json())
     .then(response => this.setState({ motherboards: response.data }))
     .catch(err => console.error(err))
   }
 
-  renderMotherboard = ({motherboardID, motherboardName}) => <div key={motherboardID}>{motherboardName}</div>
+  renderMotherboard = ({id, name, price}) => <div key={id}>{name} {price}</div>
 
   render() {
     const {motherboards} = this.state;

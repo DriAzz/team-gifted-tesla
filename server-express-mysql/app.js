@@ -3,13 +3,21 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var models = require("./models");
+const port = process.env.PORT || 5000;
 var cors = require("cors");
+var hbs = require('hbs');
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var projectsRouter = require("./routes/projects");
+var motherboardsRouter = require("./routes/motherboards");
 
 var app = express();
+app.set('views', './views');
+app.set('view engine', 'hbs');
+app.listen(port, () => console.log(`Listening on port ${port}`));
+app.use(cors());
+
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -26,6 +34,7 @@ app.use(function(req, res, next) {
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
+app.use("/motherboards", motherboardsRouter)
 
 models.sequelize.sync().then(function() {
   console.log("DB Sync'd up");

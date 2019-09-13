@@ -1,33 +1,16 @@
 var express = require("express");
 var router = express.Router();
 const mysql = require('mysql');
-const port = process.env.PORT || 5000;
+const mysql2 = require('mysql2');
 const app = express();
 const myQuery = `SELECT * FROM motherboards`;
 const cors = require('cors');
+const models = require('../models');
 
-//Console.log that server is up and running
-app.listen(port, () => console.log(`Listening on port ${port}`));
-app.use(cors());
 
-var connection = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "password1!",
-  database: "products"
-});
 
-connection.connect(function (err) {
-  if (err) {
-    console.log(err.message);
-    return;
-  }
-  console.log("Database Connected!!");
-});
 
-app.get('/', (req, res, ) => {
-  res.send('Go to /products to see products');
-});
+/*
 
 app.get('/products/add', (req, res) => {
   const { motherboardName, motherboardPrice } = req.query;
@@ -57,6 +40,16 @@ app.get('/products', (req, res) => {
     }
   });
 });
+
+router.get('/motherboards', function (req, res, next) {
+  models.motherboards.findAll({}).then(motherboardsFound => {
+    res.render('motherboard', {
+      motherboards: motherboardsFound
+    });
+  });
+});
+
+*/
 
 //GET response for backend
 /*

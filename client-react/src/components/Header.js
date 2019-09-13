@@ -33,7 +33,7 @@ const Header = props => {
                     <NavDropdown title="Products" className="dropdownProduct" id="product-nav-dropdown">
                         <NavDropdown.Item href="#processors" className="dropdowns cpudrop">Processors</NavDropdown.Item>
                         <NavDropdown.Item href="#videocard" className="dropdowns gpudrop">Video Cards</NavDropdown.Item>
-                        <NavDropdown.Item href="#motherboard" className="dropdowns motherdrop">Motherboards</NavDropdown.Item>
+                        <NavDropdown.Item href="http://localhost:5000/motherboards/motherboard_list" className="dropdowns motherdrop">Motherboards</NavDropdown.Item>
                         <NavDropdown.Item href="#storage" className="dropdowns storagedrop">Storage</NavDropdown.Item>
                     </NavDropdown>
                 </ButtonToolbar>
