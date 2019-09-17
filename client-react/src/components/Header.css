@@ -1,37 +1,34 @@
-* {
-    text-align: center;
-}
-
 .header-container {
     width: 100%;
+}
+
+.inner-header {
+    background-color: red;
+}
+
+.contact-container {
+    float: right;
+}
+
+.router-container {
+    width: 100%;
+    border: solid green 2px;
+}
+
+.homeLink {
     text-align: center;
+    margin: 10px;
+    border: solid grey;
 }
 
-.fa-flag-usa {
-    color: red;
+.loginLink {
+    text-align: center;
+    margin: 10px;
+    border: solid grey;
 }
 
-.USAimage {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
-.buttonHover {
-    padding: 5px;
-    margin-top: 20px;
-}
-
-.formSearch {
-    margin-top: 40px;
-    width: 40%;
-}
-
-.searchButton {
-    margin-left: 10px;
-}
-
-.dropdownProduct {
-    border: solid black 2px;
-    background-color: orange;
+.contactLink {
+    text-align: center;
+    margin: 10px;
+    border: solid grey;
 }

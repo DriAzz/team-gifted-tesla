@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid3-3 {
+    margin: auto;
+    border: solid black;
+}
+
+.grid-container {
+    border: solid blue;
+}
+
+.rowMotherboard {
+    border: solid yellow;
+    display: inline-block;
+    width: 33.3%;
+    margin: auto;
+}
+
+.gridRender {
+    border: solid black 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+    /* #d4d4d4 */
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}

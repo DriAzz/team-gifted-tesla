@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    margin-top: 10%;
+    padding: 10;
+    text-align: center;
+}
+
+.login {
+    width: 25%;
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 10px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.input {
+    background-color: #d1d1d1;
+    width: 40%;
+    height: 30px;
+    border: solid black 2px;
+    margin: 10px;
+}
+
+.label {
+    font-size: 20px;
+}
+
