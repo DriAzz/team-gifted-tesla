@@ -3,7 +3,6 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var models = require("./models");
-const port = process.env.PORT || 5000;
 var cors = require("cors");
 var hbs = require('hbs');
 
@@ -15,7 +14,6 @@ var motherboardsRouter = require("./routes/motherboards");
 var app = express();
 app.set('views', './views');
 app.set('view engine', 'hbs');
-app.listen(port, () => console.log(`Listening on port ${port}`));
 app.use(cors());
 
 

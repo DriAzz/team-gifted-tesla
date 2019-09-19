@@ -1,0 +1,54 @@
+.usersignup-container {
+    width: 50%;
+    margin: auto;
+    height: 100%;
+}
+
+.signup {
+    border: solid black 1px;
+    width: 80%;
+    margin: auto;
+    height: 80%;
+    padding-top: 40px;
+    box-shadow: 0px 5px 5px grey;
+}
+
+.signup-input {
+    width: 35%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    margin: 10px;
+}
+
+.signup-input[type=text]:focus {
+    border: solid 2px blue;
+}
+
+.signup-input[type=password]:focus {
+    border: solid 2px green;
+}
+
+.signup-submit-button {
+    width: 35%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid #32a852 1px;
+    background-color: #32a852;
+    font-size: 30px;
+    color: white;
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signup-title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.login-link {
+    margin-top: 5%;
+}

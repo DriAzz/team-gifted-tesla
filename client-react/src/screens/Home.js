@@ -17,7 +17,7 @@ class Grid extends Component {
     }
 
     getMotherboards = _ => {
-        fetch('http://localhost:5000/motherboards/motherboard_list')
+        fetch('http://localhost:3000/motherboards/motherboard_list')
             .then(response => response.json())
             .then(response => this.setState({ motherboards: response.data }))
             .catch(err => console.error(err))
