@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 const Usersignup = () => (
     <div className="usersignup-container">
-        <form className="signup" name="signup" method="POST" action="users/signup">
+        <form className="signup" name="signup" method="POST" action="/users/signup">
             <h1 className="signup-title">Create Account</h1>
             <div>
                 <input placeholder="First Name" className="signup-input" type="text" name="firstName" required />

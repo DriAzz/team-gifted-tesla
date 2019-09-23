@@ -47,8 +47,9 @@
 
 .signup-title {
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 25px;
 }
 
 .login-link {
-    margin-top: 5%;
+    margin-top: 3.5%;
 }
